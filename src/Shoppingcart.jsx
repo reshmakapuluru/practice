@@ -13,6 +13,7 @@ function Shoppingcart(){
       })
     },[])
    
+    
     function addtocart(a,i,t){
        var temp=[...products]
        temp[i].IsProductInCart=true;
