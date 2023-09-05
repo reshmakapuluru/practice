@@ -31,7 +31,7 @@ function Shoppingcart(){
       var temp=[...cart]
        temp[i].count--
         setcart(temp)
-        console.log(products);
+        
     }
     function remove(b,ind){
         var temp=[...cart]
