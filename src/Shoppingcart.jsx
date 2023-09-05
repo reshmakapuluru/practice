@@ -20,14 +20,12 @@ function Shoppingcart(){
        temp[i].IsProductInCart=true;
        temp[i].count++;
        setcart([...cart,temp[i]])
-       console.log(products);
        
     } 
     function inc(i){
       var temp=[...cart]
        temp[i].count++
         setcart(temp)
-        console.log(products);
     }
     function dec(i){
       var temp=[...cart]
@@ -35,7 +33,7 @@ function Shoppingcart(){
         setcart(temp)
         console.log(products);
     }
-    function remove(ind){
+    function remove(b,ind){
         var temp=[...cart]
         temp.splice(ind,1)
         setcart(temp,ind)
@@ -44,7 +42,6 @@ function Shoppingcart(){
         })
         products[x].IsProductInCart=false;
         products[x].count=0;
-        console.log(products)
     }
     return(
         <div className="d-flex flex-wrap">
@@ -87,7 +84,7 @@ function Shoppingcart(){
                     <button className="btn btn-info" onClick={()=>{dec(ind)}} disabled={b.count===1?true:false}>-</button>
                     <span>{b.count}</span>
                     <button className="btn btn-info" onClick={()=>{inc(ind)}}>+</button>
-                    <button className="btn btn-info" style={{position:'absolute',left:'100px'}} onClick={()=>{remove(ind)}}>Remove</button></center>
+                    <button className="btn btn-info" style={{position:'absolute',left:'100px'}} onClick={()=>{remove(b,ind)}}>Remove</button></center>
                     </div>
                     </div>
                     
