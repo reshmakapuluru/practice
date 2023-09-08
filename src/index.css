@@ -12,3 +12,7 @@ code {
     monospace;
 }
 
+button.shopping:disabled{
+  background-color: black;
+  color: white;
+}

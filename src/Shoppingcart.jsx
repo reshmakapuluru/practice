@@ -34,9 +34,12 @@ function Shoppingcart(){
         
     }
     function remove(b,ind){
-        var temp=[...cart]
-        temp.splice(ind,1)
-        setcart(temp,ind)
+        let Confirm = window.confirm("Are you sure you want to delete the product")
+        if(Confirm){
+            var temp=[...cart]
+            temp.splice(ind,1)
+            setcart(temp,ind)
+        }
         var x=products.findIndex((c)=>{
             return (c.id===b.id)
         })
@@ -58,7 +61,7 @@ function Shoppingcart(){
                         <p className="card-text">{a.price}</p>
                     <div>
                     
-                    <button  className="btn btn-info" onClick={()=>{addtocart(i)}}  disabled={a.IsProductInCart?true:false}>Add to cart</button>
+                    <button  className="btn btn-info shopping" onClick={()=>{addtocart(i)}}  disabled={a.IsProductInCart?true:false}>{a.IsProductInCart?'Added':'Add to cart'}</button>
                       
                       
                     </div>
@@ -78,13 +81,13 @@ function Shoppingcart(){
                     return <div className="card shadow-lg  rounded  m-2 mb-4" style={{backgroundColor:'lightpink'}} >
                        <div className="card-body d-flex justify-content-between" >
                             <center><img src={b.image} style={{height:'90px',width:'90px'}} alt="Card image cap"/></center>
-                            <h5 className="card-title mb-5">{b.title}</h5>
+                            <h5 className="card-title mb-5" style={{marginLeft:'12px'}}>{b.title}</h5>
                             <p className="card-text">${(b.count*b.price).toFixed(2)}</p></div>
                     <div><center style={{position:'absolute',bottom:'20px',left:'120px'}}>
                     <button className="btn btn-info" onClick={()=>{dec(ind)}} disabled={b.count===1?true:false}>-</button>
                     <span>{b.count}</span>
                     <button className="btn btn-info" onClick={()=>{inc(ind)}}>+</button>
-                    <button className="btn btn-info" style={{position:'absolute',left:'100px'}} onClick={()=>{remove(b,ind)}}>Remove</button></center>
+                    <button className="btn btn-danger" style={{position:'absolute',left:'100px'}} onClick={()=>{remove(b,ind)}}>Remove</button></center>
                     </div>
                     </div>
                     
