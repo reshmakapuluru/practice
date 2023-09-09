@@ -16,6 +16,8 @@ function Gallery(){
       });
     },[]);
     
+
+    
     function addtoGallery(i){
        var temp=[...photos]
        temp[i].IsImageInGallery=true;
