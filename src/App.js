@@ -3,7 +3,6 @@ import './App.css';
 import React from 'react';
 import {Outlet,Link} from 'react-router-dom'
 import NavBar from './NavBar';
-import Meal from './Meal';
 
 function App() {
   return (
