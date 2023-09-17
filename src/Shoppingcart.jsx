@@ -65,7 +65,6 @@ function Shoppingcart(){
                       
                       
                     </div>
-                      
                     </div>
                   </div>
                 })

@@ -4,6 +4,7 @@ import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import Shoppingcart from './Shoppingcart';
+
 function App() {
   return (
     <div>
@@ -11,5 +12,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
