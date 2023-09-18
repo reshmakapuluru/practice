@@ -1,0 +1,13 @@
+{
+    "books": [
+      { "id": 1, "title": "json-server", "author": "reshma" },
+      { "id": 2, "title": "redux toolkit", "author": "bharathi" },
+      { "id": 3, "title": "reactjs", "author": "harshitha" },
+      { "id": 4, "title": "nodejs", "author": "divya" }
+    ],
+    "comments": [
+      { "id": 1, "body": "some comment", "postId": 1 }
+    ],
+    "profile": { "name": "typicode" }
+  }
+  
